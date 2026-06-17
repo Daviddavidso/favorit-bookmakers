@@ -56,14 +56,18 @@
   #panel:focus-visible{outline-offset:-3px}
 
   /* table */
-  .board{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line-2);border-radius:14px;overflow:hidden}
+  .board{width:100%;border-collapse:collapse;table-layout:fixed;background:var(--surface);border:1px solid var(--line-2);border-radius:14px;overflow:hidden}
+  .board th:nth-child(1),.board td.bk{width:34%}
+  .board th:nth-child(2),.board td.freebet{width:18%}
+  .board th:nth-child(3),.board td.terms{width:24%}
+  .board th:nth-child(4),.board td.act{width:24%}
   .board thead th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2);font-weight:700;padding:11px 16px;background:var(--surface-2);border-bottom:1px solid var(--line-2)}
   .board thead th:last-child,.board td.act{text-align:right}
   .board tbody td{padding:13px 16px;border-top:1px solid var(--line);vertical-align:middle}
   .board tbody tr{animation:rowIn .45s ease backwards;animation-delay:calc(var(--i,0)*45ms)}
   .board tbody tr:first-child td{border-top:0}
   .board tbody tr:hover td{background:var(--surface-2)}
-  .row--new td{background:#fcfbf3}
+  .row--new td{background:transparent}
   .bk{display:flex;align-items:center;gap:13px;min-width:0}
   .bk__logo{width:40px;height:40px;border-radius:9px;object-fit:cover;flex:none;background:#fff;border:1px solid var(--line)}
   .bk__name{font-weight:700;font-size:15.5px;letter-spacing:-.01em}
@@ -197,7 +201,6 @@
       <section class="panel" aria-labelledby="tips-h">
         <div class="panel__head">
           <h2 id="tips-h">Прогнозы экспертов</h2>
-          <a href="/predictions/">Все →</a>
         </div>
         <ul class="tips" id="tips"></ul>
       </section>
