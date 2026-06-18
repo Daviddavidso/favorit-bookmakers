@@ -53,7 +53,7 @@
   .tab:hover:not([aria-selected="true"]){border-color:var(--ink-2)}
   .count{font-size:13px;color:var(--ink-2);margin:0 2px 12px}
   .count b{color:var(--ink)}
-  .freshness{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-2);margin:8px 0 0}
+  .freshness{display:flex;flex-wrap:wrap;align-items:center;gap:4px 7px;font-size:12.5px;color:var(--ink-2);margin:8px 0 0}
   .freshness .dot{width:7px;height:7px;border-radius:50%;background:var(--green2);flex:none;box-shadow:0 0 0 3px rgba(22,163,74,.18)}
   #panel:focus-visible{outline-offset:-3px}
 
@@ -128,15 +128,24 @@
 
   @media (max-width:920px){.grid{grid-template-columns:1fr}aside{order:2}}
   @media (max-width:620px){
-    .board,.board tbody,.board tr,.board td{display:block;width:100%}
+    .board{display:block;width:100%;border:0;background:transparent;border-radius:0;overflow:visible}
     .board thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
-    .board tbody tr{border:1px solid var(--line-2);border-radius:13px;margin-bottom:11px;padding:6px 12px 12px;background:var(--surface)}
-    .board tbody td{border-top:0!important;padding:7px 2px}
-    .board tbody tr:hover td{background:transparent}
-    td.freebet::before{content:"Фрибет: ";color:var(--ink-2);font-weight:600}
-    td.terms::before{content:"Условия: ";color:var(--ink-2);font-weight:600}
-    td.act{text-align:left}
-    td.act .bonus{display:flex;flex-direction:row;gap:8px;width:100%}
+    .board tbody{display:block}
+    .board tbody tr{display:block;border:1px solid var(--line-2);border-radius:14px;background:var(--surface);
+      margin:0 0 12px;padding:4px 16px 16px;box-shadow:0 1px 2px rgba(16,20,24,.05)}
+    .board tbody tr:hover{background:var(--surface)}
+    .board tbody td{display:block;border:0!important;background:transparent!important;padding:0}
+    .board tbody td.bk,.board tbody td.freebet,.board tbody td.terms,.board tbody td.act{width:auto}
+    .board tbody td.bk{padding:13px 0;border-bottom:1px solid var(--line)}
+    .board tbody td.freebet,.board tbody td.terms{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line)}
+    .board tbody td.freebet::before,.board tbody td.terms::before{flex:none;color:var(--ink-2);font-weight:600;font-size:13.5px}
+    .board tbody td.freebet::before{content:"Фрибет"}
+    .board tbody td.terms::before{content:"Условия"}
+    .board tbody td.freebet .amt__pre{margin-left:auto;font-size:13px;margin-right:4px}
+    .board tbody td.freebet .num{font-size:15px;white-space:nowrap}
+    .board tbody td.terms{color:var(--ink);font-size:14.5px;font-weight:500;text-align:right}
+    .board tbody td.act{padding-top:15px}
+    .board tbody td.act .bonus{display:flex;width:100%;min-height:54px}
   }
   @keyframes rowIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
   @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
