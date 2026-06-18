@@ -1,0 +1,115 @@
+{
+  "updated": "2026-06-18T13:01:47+00:00",
+  "items": [
+    {
+      "n": "Винлайн",
+      "slug": "winline",
+      "amount": 10000,
+      "terms": "Деп от 1 000 ₽",
+      "cats": [
+        "legal",
+        "cupis",
+        "football",
+        "hockey"
+      ]
+    },
+    {
+      "n": "Фонбет",
+      "slug": "fonbet",
+      "amount": 15000,
+      "terms": "Без депозита",
+      "cats": [
+        "legal",
+        "cupis",
+        "football",
+        "hockey"
+      ]
+    },
+    {
+      "n": "Пари",
+      "slug": "pari",
+      "amount": 3000,
+      "terms": "Деп от 100 ₽",
+      "cats": [
+        "legal",
+        "cupis",
+        "football"
+      ]
+    },
+    {
+      "n": "Беттери",
+      "slug": "bettery",
+      "amount": 2000,
+      "terms": "Без депозита",
+      "isNew": true,
+      "cats": [
+        "new",
+        "legal",
+        "cupis"
+      ]
+    },
+    {
+      "n": "BetBoom",
+      "slug": "betboom",
+      "amount": 10000,
+      "terms": "Деп от 1 000 ₽",
+      "cats": [
+        "legal",
+        "cupis",
+        "hockey"
+      ]
+    },
+    {
+      "n": "Мелбет",
+      "slug": "melbet",
+      "amount": 30000,
+      "terms": "Деп от 1 000 ₽",
+      "cats": [
+        "legal",
+        "football"
+      ]
+    },
+    {
+      "n": "Леон",
+      "slug": "leon",
+      "amount": 500,
+      "terms": "Без депозита",
+      "cats": [
+        "legal",
+        "cupis",
+        "football"
+      ]
+    },
+    {
+      "n": "Бетсити",
+      "slug": "betcity",
+      "amount": 2500,
+      "terms": "Деп от 300 ₽",
+      "cats": [
+        "legal",
+        "cupis"
+      ]
+    },
+    {
+      "n": "Zenit",
+      "slug": "zenit",
+      "amount": 31000,
+      "terms": "Деп от 1 000 ₽",
+      "cats": [
+        "legal",
+        "hockey"
+      ]
+    },
+    {
+      "n": "Tennisi",
+      "slug": "tennisi",
+      "amount": 18000,
+      "terms": "Деп от 300 ₽",
+      "cats": [
+        "legal",
+        "cupis",
+        "football"
+      ]
+    }
+  ]
+}
