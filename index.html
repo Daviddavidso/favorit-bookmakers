@@ -64,10 +64,10 @@
 
   /* table */
   .board{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;background:var(--surface);border:1px solid var(--line-2);border-radius:14px;overflow:hidden}
-  .board th:nth-child(1),.board td.bk{width:34%}
+  .board th:nth-child(1),.board td.bk{width:33%}
   .board th:nth-child(2),.board td.freebet{width:18%}
-  .board th:nth-child(3),.board td.terms{width:24%}
-  .board th:nth-child(4),.board td.act{width:24%}
+  .board th:nth-child(3),.board td.terms{width:22%}
+  .board th:nth-child(4),.board td.act{width:27%}
   .board thead th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2);font-weight:700;padding:11px 16px;background:var(--surface-2);border-bottom:1px solid var(--line-2)}
   .board thead th:last-child,.board td.act{text-align:right}
   .board tbody td{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:middle}
@@ -75,14 +75,15 @@
   .board tbody tr:last-child td{border-bottom:0}
   .board tbody tr:hover td{background:var(--surface-2)}
   .row--new td{background:transparent}
-  .bk{display:flex;align-items:center;gap:13px;min-width:0}
+  .bk{vertical-align:middle}
+  .bk-in{display:flex;align-items:center;gap:13px;min-width:0}
   .bk__logo{width:40px;height:40px;border-radius:9px;object-fit:cover;flex:none;background:#fff;border:1px solid var(--line)}
   .bk__name{font-weight:700;font-size:15.5px;letter-spacing:-.01em}
   .bk__tag{display:inline-block;font-size:11px;font-weight:600;color:#b42318;margin-left:8px;background:var(--hot-tint);padding:1px 8px;border-radius:6px;vertical-align:1px}
   .amt__pre{font-size:12px;color:var(--ink-2);margin-right:3px}
   .amt .num{font-weight:600;font-size:14.5px}
   .terms{color:var(--ink-2);font-size:13.5px}
-  .bonus{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:46px;padding:6px 20px;border-radius:10px;
+  .bonus{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:46px;padding:6px 16px;border-radius:10px;max-width:100%;
     background:var(--black);color:#fff;text-decoration:none;font-weight:800;font-size:14px;letter-spacing:.03em;white-space:nowrap;transition:.14s}
   .bonus__sub{font-size:10.5px;font-weight:500;color:#aeb6c0;letter-spacing:0}
   .bonus:hover{background:var(--green2)}
@@ -321,10 +322,10 @@ function bkRows(){
     const sum = fmt.format(b.amount)+' ₽';
     const tag = b.isNew ? '<span class="bk__tag">Новый</span>' : '';
     return `<tr role="row" class="${b.isNew?'row--new':''}" style="--i:${i}">
-      <td role="cell" class="bk">
+      <td role="cell" class="bk"><span class="bk-in">
         <img class="bk__logo" src="assets/logos/${b.slug}.png" alt="" loading="lazy" width="40" height="40">
         <span class="bk__name">${b.n}${tag}</span>
-      </td>
+      </span></td>
       <td role="cell" class="freebet amt"><span class="amt__pre">до</span><span class="num">${sum}</span></td>
       <td role="cell" class="terms">${b.terms}</td>
       <td role="cell" class="act">
